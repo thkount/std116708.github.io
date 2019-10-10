@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title> Heraklion Earthquake  Camp Areas </title>
+	
+	 <script>
+		
+		</script>
+	
+	<link rel="stylesheet" href="./map_list_control.css">
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	<script type="text/javascript" src="polygon_map_data.js"></script>
+	<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="map_list_control.js"></script>
+  </head>
+  <body>
+	
+	
+	<div  class = "perifereiaLogo">
+		<img src="Coat_of_Arms_of_Greece_(Ministries).svg" alt="ethnosimo" height="100" width="100"></img>
+		<div id = "logotxt">ΠΕΡΙΦΕΡΕΙΑ ΚΡΗΤΗΣ</div>
+		<div id = "logotxt2">Περιφερειακή Ενότητα Ηρακλείου</div>
+	</div>
+	<div id = "pp">
+		<div id = "ppLogo"><img src="pplogo.png" alt="pplog" height="100" width="100"></img></div>
+		<div id = "ppLogoTxt">
+			<div>Διεύθυνση Πολιτικής Προστασίας</div>
+			<div>Τμήμα Π.Π. Π.Ε. Ηρακλείου</div>
+			
+		</div>
+	</div>
+	<!---->
+	<div id = "titlos">Χώροι Καταυλισμού</div>
+	<div id = "titlos2">Δήμων Π.Ε. Ηρακλείου</div>
+	
+	<div id = "appContainer">
+		
+		
+		<div class = "etiketa">Επιλέξτε Δήμο: </div>
+		<div > 
+		
+			<select id="epilogiDimou" onclick="getMunicipality()">
+			  <option value="init">Όλοι οι Δήμοι</option>
+			  <option value="archanwn">Αρχανών - Αστερουσίων</option>
+			  <option value="viannou">Βιάννου</option>
+			  <option value="gortinas">Γόρτυνας</option>
+			  <option value="irakleiou">Ηρακλείου</option>
+			  <option value="maleviziou">Μαλεβιζίου</option>
+			  <option value="minwa">Μινώα Πεδιάδας</option>
+			  <option value="faistoy">Φαιστού</option>
+			  <option value="xersonisou">Χερσονήσου</option>
+			</select>
+			
+		</div>
+		
+		<div class = "etiketa" id = "epoikism"></div>
+		<div id="map-canvas"></div>
+		<ol id="selectable">
+		  
+		  
+		</ol>
+	</div>
+  </body>
+</html>

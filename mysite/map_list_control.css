@@ -1,0 +1,122 @@
+ html, body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+	  
+	   #map-canvas {
+        height: 700px;
+		width: 850px;
+        margin: 0px;
+        padding: 0px;
+		position: relative;
+		left: 0px;
+		top: -30px;
+      }
+	  
+	   #appContainer {
+        height: 850px;
+		width: 1250px;
+        margin: 0px;
+        padding: 0px; 
+		
+		position: relative;
+		top: 65px;
+      }
+	  
+	  .infoWin {
+		line-height:1.35;
+		font-size: 20px;
+		overflow-y:hidden;
+		white-space:nowrap;
+		
+	  }
+	  
+	  #epilogiDimou{
+		font-size: 25px;
+		position: relative;
+		left: 222px;
+		top: -32px;
+	  }
+	  
+	  .etiketa {
+		font-size: 29px;/*larger*/
+		font-family: verdana;
+		position: relative;
+		
+	  }
+	  
+	  #epoikism {
+		position: absolute;
+		left: 856px;
+		top: 0px;
+	  }
+	  
+  #selectable .notSelected{ background: #CC6600; }
+  #selectable .selected { background: #003399; color: white; }
+  #selectable 	{	list-style-type: none; 
+					margin: 0; 
+					padding: 0; 
+					width: 525px;
+					top: -732px;
+					position: relative;
+					height: 702px;
+					overflow-y: auto;
+					left: 855px;
+				}
+				
+  #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 45px; cursor: pointer; font-family: verdana;}
+  
+  .perifereiaLogo {
+	font-size: 45px;/*larger*/
+	font-family: verdana;
+	position: relative;
+  
+  }
+  
+  
+  #logotxt, #logotxt2 {
+	position: relative;
+	top: -109px;
+	color: #003399; 
+	left: 110px;
+  }
+  
+  #logotxt2 {
+	top: -114px;
+	font-size: 29px;
+  }
+  
+  #pp {
+	font-size: 27px;
+	font-family: verdana;
+	position: absolute;
+	top: 0px;
+	left: 749px;
+  }
+  #ppLogoTxt {
+	position: relative;
+	top: -93px;
+	left: 116px;
+	font-weight: bold;
+	color: #003399; 
+  }
+  
+  #titlos, #titlos2{
+	font-size: 41px;/*larger*/
+	font-family: verdana;
+	position: relative;
+	top: 25px;
+	font-weight: bold;
+	color: #003399; 
+	left: 181px;
+  }
+  
+  #titlos2{
+	
+	top: 35px;
+	left: 150px;
+  }
+ 
+  
+  
