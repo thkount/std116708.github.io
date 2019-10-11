@@ -70,11 +70,11 @@
 	//var myPopup = myMarker.bindPopup("<button id = \"b1\" type =\" button \" onclick =\"onButtonClick(this)\">Click Me</button> hi there <button id = \"b2\" type =\" button \" onclick =\"onButtonClick(this)\">Click Me !!!</button>")
 	//myPopup.openPopup();
 	
-	L.easyButton( '<span class="star">&starf;</span>', function(btn, map){
-		//var antarctica = [-77,70];
-		//map.setView(antarctica);
-		easyButtonClick();
-	}).addTo(myMap);
+	//L.easyButton( '<span class="star">&starf;</span>', function(btn, map){
+	//	//var antarctica = [-77,70];
+	//	//map.setView(antarctica);
+	//	easyButtonClick();
+	//}).addTo(myMap);
 
 	var setPinOnCurrentPositionButton = L.easyButton({
 		id: 'id-for-the-button',  // an id for the generated button
@@ -88,7 +88,8 @@
 				setPinOnCurrentPosition(button, map);
 		},
 		title: 'Πινέζα στη Θέση μου',
-		icon: '<span class="star">&starf;</span>'
+		//icon: '<span class="star">&curren;</span>'
+		icon: '<span class="star"><img src="https://cdn0.iconfinder.com/data/icons/map-4/500/map_7-512.png" alt="Trulli" width="30" height="45"></span>'
 	}]
 	}).addTo(myMap);;
 	
