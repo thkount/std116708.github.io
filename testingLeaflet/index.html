@@ -26,14 +26,13 @@
 	/*
 	ver: 1.1
 	Perigrafi: 
-	
-	1. Κεντράρισμα Χάρτη στη θεση του χρήστη
-		a. Αυτόματος προσδιορισμός θέσης: 
-	2. Δημιουργία κουμπιού για την τοποθετηση πινεζας (κουμπι πινέζας)
-	3. Τοποθέτηση πινέζας στην τρέχουσα θέση με το πάτημα του  κουμπιου πινέζας
-		a. Πρίν βρεθεί η θέση το κουμπί πινέζας θα είναι ανενεργο. 
-		b. Όταν βρεθεί η θεση θα ενεργοποιείται.
-		c. Τοποθέτηση πινεζας
+	------------
+	1. Δημιουργία κουμπιού για την τοποθετηση πινεζας (κουμπι πινέζας)
+	2. Πάτημα κουμπιού πινέζας
+		a. Αυτόματος προσδιορισμός θέσης χρήστη
+			i.  Κεντράρισμα Χάρτη στη θεση του χρήστη 
+			ii. Τοποθέτηση πινεζας
+
 
 	*/
 	
@@ -60,7 +59,7 @@
 	}).addTo(myMap);
 	
 	//Find current location
-	myMap.locate({setView: true, maxZoom: 16});
+	
 	
 	//	var myMarker = L.marker([51.5, -0.09]);
 	// myMarker.addTo(myMap);
@@ -90,16 +89,19 @@
 	}).addTo(myMap);;
 	
 	//disable pin button 
-	setPinOnCurrentPositionButton.disable();
+	//setPinOnCurrentPositionButton.disable();
 	
 	//add location found listener to myMap
 	myMap.on('locationfound', onLocationFound);
 	
 	function onLocationFound(e) {
-		radiusAcuracy = e.accuracy;
+		radiusAcuracy = e;
 		//enable pin button
-		setPinOnCurrentPositionButton.enable();
-		
+		//setPinOnCurrentPositionButton.enable();
+		L.marker(myMap.getCenter()).addTo(myMap)
+			//.bindPopup("You are within " + radiusAcuracy.accuracy + " meters from this point").openPopup();
+			.bindPopup("<button id = \"b1\" type =\" button \" onclick =\"onButtonClick(this)\">Click Me</button> hi there <button id = \"b2\" type =\" button \" onclick =\"onButtonClick(this)\">Click Me !!!</button>").openPopup();
+		L.circle(myMap.getCenter(), radiusAcuracy.accuracy).addTo(myMap);
 		
 	}
 	
@@ -109,8 +111,6 @@
 		alert(e.message);
 	}
 
-
-		
 	
 	var popup = L.popup();
 	function onMapClick(e) {
@@ -127,11 +127,16 @@
 		//alert( 'Alert Generale !!!')
 		//el = element;
 		//console.log (el);
-		L.marker(myMap.getCenter()).addTo(myMap)
-			.bindPopup("You are within " + radiusAcuracy + " meters from this point").openPopup();
-
-		L.circle(myMap.getCenter(), radiusAcuracy).addTo(myMap);
+		myMap.locate({setView: true, maxZoom: 16});
+		
+		
 	}
+	
+	function onButtonClick(element){
+	
+		console.log("Button id = "+element.getAttribute("id"));
+	}
+	
 	</script>
 
 
